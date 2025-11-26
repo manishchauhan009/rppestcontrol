@@ -75,10 +75,10 @@ export default function Footer() {
             <p>
               Email:{" "}
               <Link
-                href="mailto:info@rppestcontrol.in"
+                href="mailto:rppestcontrol083@gmail.com"
                 className="hover:text-emerald-300"
               >
-                info@rppestcontrol.com
+                rppestcontrol083@gmail.com
               </Link>
             </p>
           </div>
