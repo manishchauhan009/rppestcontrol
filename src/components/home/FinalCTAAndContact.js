@@ -103,13 +103,13 @@ export default function FinalCTAAndContact() {
 
           <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
             <Link
-              href="tel:+919824931033"
+              href="tel:+919824931083"
               className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-950 px-5 py-2 text-sm font-semibold text-emerald-200 shadow-md hover:bg-slate-950 transition"
             >
-              Call: 98249 31033
+              Call: 98249 31083
             </Link>
             <Link
-              href="https://wa.me/919824931033?text=Hi%2C%20I%20need%20pest%20control%20service%20at%20my%20location."
+              href="https://wa.me/919824931083?text=Hi%2C%20I%20need%20pest%20control%20service%20at%20my%20location."
               target="_blank"
               rel="noreferrer"
               className="flex-1 inline-flex items-center justify-center gap-2 rounded-full border border-emerald-950/70 bg-emerald-100/20 px-5 py-2 text-sm font-semibold text-emerald-950 hover:bg-emerald-50/40 transition"
@@ -139,17 +139,17 @@ export default function FinalCTAAndContact() {
                 </p>
                 <p>
                   <Link
-                    href="tel:+919824931033"
+                    href="tel:+919824931083"
                     className="hover:text-emerald-300"
                   >
-                    98249 31033
+                    98249 31083
                   </Link>{" "}
                   /{" "}
                   <Link
-                    href="tel:+918469728777"
+                    href="tel:+918469728727"
                     className="hover:text-emerald-300"
                   >
-                    84697 28777
+                    84697 28727
                   </Link>
                 </p>
               </div>
@@ -160,7 +160,7 @@ export default function FinalCTAAndContact() {
                 </p>
                 <p>
                   <Link
-                    href="https://wa.me/919824931033"
+                    href="https://wa.me/919824931083"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-emerald-300"

@@ -48,14 +48,14 @@ export default function Header() {
           ))}
 
           <Link
-            href="tel:+919824931033"
+            href="tel:+919824931083"
             className="rounded-full bg-emerald-500 px-4 py-1.5 text-xs font-semibold text-slate-950 shadow-md shadow-emerald-500/40 hover:bg-emerald-400 transition"
           >
             Call Now
           </Link>
 
           <Link
-            href="https://wa.me/919824931033?text=Hi%2C%20I%20need%20pest%20control%20service"
+            href="https://wa.me/919824931083?text=Hi%2C%20I%20need%20pest%20control%20service"
             className="rounded-full border border-slate-600 px-4 py-1.5 text-xs font-semibold text-slate-100 hover:border-emerald-400 hover:text-emerald-300 transition"
           >
             WhatsApp
@@ -86,7 +86,7 @@ export default function Header() {
           ))}
 
           <Link
-            href="tel:+919824931033"
+            href="tel:+919824931083"
             onClick={() => setOpen(false)}
             className="rounded-full bg-emerald-500 px-4 py-1.5 text-xs text-center font-semibold text-slate-950 shadow-md hover:bg-emerald-400 transition"
           >
@@ -94,7 +94,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="https://wa.me/919824931033?text=Hi%2C%20I%20need%20pest%20control%20service"
+            href="https://wa.me/919824931083?text=Hi%2C%20I%20need%20pest%20control%20service"
             onClick={() => setOpen(false)}
             className="rounded-full border border-slate-600 px-4 py-1.5 text-xs text-center font-semibold text-slate-100 hover:text-emerald-300 hover:border-emerald-400 transition"
           >

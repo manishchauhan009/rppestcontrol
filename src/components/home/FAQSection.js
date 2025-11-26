@@ -78,7 +78,7 @@ export default function FAQSection() {
           </Link>{" "}
           or{" "}
           <Link
-            href="https://wa.me/919824931033"
+            href="https://wa.me/919824931083"
             className="text-emerald-300 hover:text-emerald-200 underline underline-offset-2"
           >
             ask on WhatsApp

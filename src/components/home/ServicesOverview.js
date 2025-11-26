@@ -127,13 +127,13 @@ export default function ServicesOverview() {
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="tel:+919824931033"
+              href="tel:+919824931083"
               className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-2 text-xs sm:text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition"
             >
               Call for Free Inspection
             </Link>
             <Link
-              href="https://wa.me/919824931033?text=Hi%2C%20I%20need%20help%20choosing%20a%20pest%20control%20service."
+              href="https://wa.me/919824931083?text=Hi%2C%20I%20need%20help%20choosing%20a%20pest%20control%20service."
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-slate-600 px-5 py-2 text-xs sm:text-sm font-semibold text-slate-100 hover:border-emerald-400 hover:text-emerald-300 transition"

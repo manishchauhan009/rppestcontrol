@@ -48,23 +48,23 @@ export default function Footer() {
             <p>
               Phone:{" "}
               <Link
-                href="tel:+919824931033"
+                href="tel:+919824931083"
                 className="hover:text-emerald-300"
               >
-                98249 31033
+                98249 31083
               </Link>{" "}
               /{" "}
               <Link
-                href="tel:+918469728777"
+                href="tel:+918469728727"
                 className="hover:text-emerald-300"
               >
-                84697 28777
+                84697 28727
               </Link>
             </p>
             <p>
               WhatsApp:{" "}
               <Link
-                href="https://wa.me/919824931033"
+                href="https://wa.me/919824931083"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-emerald-300"

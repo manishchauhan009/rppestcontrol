@@ -36,13 +36,13 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-3 mb-4">
             <Link
-              href="tel:+919824931033"
+              href="tel:+919824931083"
               className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition"
             >
               Call Now for Inspection
             </Link>
             <Link
-              href="https://wa.me/919824931033?text=Hi%2C%20I%20need%20pest%20control%20service%20at%20my%20location."
+              href="https://wa.me/919824931083?text=Hi%2C%20I%20need%20pest%20control%20service%20at%20my%20location."
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-slate-500 px-5 py-2 text-sm font-semibold text-slate-100 hover:border-emerald-400 hover:text-emerald-300 transition"
@@ -103,7 +103,7 @@ export default function Hero() {
                 <div className="text-right">
                   <p className="text-xs text-slate-400">Emergency support</p>
                   <p className="text-sm font-semibold text-slate-100">
-                    98249 31033 / 84697 28777
+                    98249 31083 / 84697 28727
                   </p>
                 </div>
               </div>

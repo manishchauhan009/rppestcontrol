@@ -80,7 +80,7 @@ export default function Testimonials() {
         {/* bottom CTA */}
         <div className="text-center mt-12">
           <Link
-            href="https://wa.me/919824931033?text=Hi%2C%20I%20want%20to%20book%20a%20pest%20control%20service."
+            href="https://wa.me/919824931083?text=Hi%2C%20I%20want%20to%20book%20a%20pest%20control%20service."
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition"
