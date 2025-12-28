@@ -78,12 +78,12 @@ export default function FinalCTAAndContact() {
       {/* background accents */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 left-10 h-72 w-72 rounded-full bg-emerald-500/10 blur-3xl" />
-        <div className="absolute bottom-[-6rem] right-0 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl" />
+        <div className="absolute -bottom-24 right-0 h-80 w-80 rounded-full bg-sky-500/10 blur-3xl" />
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4 space-y-10">
         {/* Top CTA banner */}
-        <div className="rounded-3xl bg-gradient-to-r from-emerald-500 to-sky-500 px-6 py-7 md:px-8 md:py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 shadow-[0_24px_60px_-30px_rgba(16,185,129,0.7)]">
+        <div className="rounded-3xl bg-linear-to-r from-emerald-500 to-sky-500 px-6 py-7 md:px-8 md:py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 shadow-[0_24px_60px_-30px_rgba(16,185,129,0.7)]">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-emerald-950/80 mb-1">
               R.P. Pest Control • Gujarat
@@ -258,7 +258,7 @@ export default function FinalCTAAndContact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full mt-2 px-4 py-2 rounded-md bg-emerald-500 text-slate-950 text-sm font-semibold hover:bg-emerald-400 transition disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full mt-2 px-4 py-2 rounded-md bg-emerald-500 text-slate-950 text-sm font-semibold hover:bg-emerald-400 transition disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer"
               >
                 {loading ? "Sending..." : "Submit Enquiry"}
               </button>

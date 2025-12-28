@@ -1,12 +1,11 @@
-// app/api/contact/route.js
 import nodemailer from "nodemailer";
+import { google } from "googleapis";
 
 export async function POST(req) {
   try {
     const body = await req.json();
     const { name, phone, location, service, message } = body;
 
-    // Basic validation
     if (!name || !phone) {
       return new Response(
         JSON.stringify({ ok: false, error: "Name and phone are required." }),
@@ -14,7 +13,7 @@ export async function POST(req) {
       );
     }
 
-    // Create transporter
+    /* ---------------- EMAIL SETUP ---------------- */
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT || 587),
@@ -25,31 +24,57 @@ export async function POST(req) {
       },
     });
 
-    const toEmail = process.env.CONTACT_TO_EMAIL || process.env.SMTP_USER;
-
-    // Email content
     const html = `
-      <div style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 14px; color: #111827;">
+      <div style="font-family: Arial, sans-serif">
         <h2>New Pest Control Enquiry</h2>
-        <p>A new enquiry has been submitted from the website.</p>
-        <hr />
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Location / Area:</strong> ${location || "Not provided"}</p>
+        <p><strong>Location:</strong> ${location || "Not provided"}</p>
         <p><strong>Pest Problem:</strong> ${service || "Not specified"}</p>
-        <p><strong>Message:</strong><br/>${message || "No additional message"}</p>
-        <hr />
-        <p style="font-size: 12px; color: #6b7280;">
-          This email was generated from the R.P. Pest Control website contact form.
-        </p>
+        <p><strong>Message:</strong><br/>${message || "No message"}</p>
       </div>
     `;
 
     await transporter.sendMail({
       from: process.env.CONTACT_FROM_EMAIL || process.env.SMTP_USER,
-      to: toEmail,
+      to: process.env.CONTACT_TO_EMAIL || process.env.SMTP_USER,
       subject: `New Pest Control Enquiry - ${name}`,
       html,
+    });
+
+    /* ---------------- GOOGLE SHEETS ---------------- */
+    // const auth = new google.auth.GoogleAuth({
+    //   keyFile: process.env.GOOGLE_KEY_FILE,
+    //   scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+    // });
+
+    // const authClient = await auth.getClient();
+    // const sheets = google.sheets({ version: "v4", auth: authClient });
+    const auth = new google.auth.GoogleAuth({
+  credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON),
+  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+});
+
+const authClient = await auth.getClient();
+const sheets = google.sheets({ version: "v4", auth: authClient });
+
+
+
+    await sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      range: "Sheet1!A:G",
+      valueInputOption: "USER_ENTERED",
+      requestBody: {
+        values: [[
+          new Date().toLocaleString(),
+          name,
+          phone,
+          location || "",
+          service || "",
+          message || "",
+          "Website"
+        ]]
+      }
     });
 
     return new Response(JSON.stringify({ ok: true }), { status: 200 });
@@ -58,7 +83,7 @@ export async function POST(req) {
     return new Response(
       JSON.stringify({
         ok: false,
-        error: "Something went wrong while sending your message.",
+        error: "Something went wrong. Please try again.",
       }),
       { status: 500 }
     );

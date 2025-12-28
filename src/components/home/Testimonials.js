@@ -35,7 +35,7 @@ export default function Testimonials() {
       {/* gradient blobs */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-20 right-10 w-72 h-72 bg-emerald-500/10 blur-3xl rounded-full" />
-        <div className="absolute bottom-[-4rem] left-0 w-80 h-80 bg-sky-500/10 blur-3xl rounded-full" />
+        <div className="absolute -bottom-16 left-0 w-80 h-80 bg-sky-500/10 blur-3xl rounded-full" />
       </div>
 
       <div className="relative max-w-6xl mx-auto px-4">
